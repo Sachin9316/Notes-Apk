@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_images"
+    android:padding="20dp"
+    android:gravity="center"
+    tools:context="Notes2.MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/icon_signUp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bunnyu1"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#000C40"/>
+
+    <TextView
+        android:id="@+id/hellotxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Hello."
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_below="@+id/icon_signUp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/letstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's get started!"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_below="@+id/hellotxt"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayone"
+        android:layout_below="@+id/letstxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:textColorHint="@color/hintcolor"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:hint="Enter Email"/>
+
+        <EditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:textColorHint="@color/hintcolor"
+            android:textColor="@color/black"
+            android:layout_marginVertical="14dp"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:hint="Password"/>
+
+
+        <EditText
+            android:id="@+id/edtConfPass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hintcolor"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:hint="Confirm Password"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/border"
+            android:text="Create Account"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/progress_circular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linearlayone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hintcolor"
+            android:text="Already have an account? "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/logintxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Login here"
+            android:textColor="@color/purple_500"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/background_images"
+    tools:context="Notes2.LoginScreen">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/icon_loginUp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_overlay="true"
+        android:padding="5dp"
+        android:src="@drawable/bunny"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#000C40"/>
+
+    <TextView
+        android:id="@+id/hellotxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Hello."
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_below="@+id/icon_loginUp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/letstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_below="@+id/hellotxt"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/linearlaythree"
+        android:layout_below="@+id/letstxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/logEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:textColorHint="@color/hintcolor"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:hint="Email"/>
+
+        <EditText
+            android:id="@+id/logPass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:textColorHint="@color/hintcolor"
+            android:textColor="@color/black"
+            android:layout_marginVertical="14dp"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:hint="Password"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border"
+            android:text="Login"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/progress_circular1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linearlaythree"
+        android:id="@+id/linearlayfour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="34dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@color/hintcolor"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/regtxtbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Register here"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/purple_500"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
